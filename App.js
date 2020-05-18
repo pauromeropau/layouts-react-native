@@ -53,7 +53,7 @@ const App = () => {
           </ScrollView>
           <Text style={styles.titulo}>Best places</Text>
           <View>
-          <View>
+            <View>
               <Image
                 style={styles.mejores}
                 source={require('./assets/img/mejores1.jpg')}
@@ -72,6 +72,33 @@ const App = () => {
               />
             </View>
           </View>
+          <Text style={styles.titulo}>Best hotels</Text>
+          <View style={styles.listado}>
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje1.jpg')}
+              />
+            </View>
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje2.jpg')}
+              />
+            </View>
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje3.jpg')}
+              />
+            </View>
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje4.jpg')}
+              />
+            </View>
+          </View>
         </View>
       </ScrollView>
     </>
@@ -80,10 +107,9 @@ const App = () => {
 
 const styles = StyleSheet.create({
   mejores: {
-    width: '95%',
-    height: 100, 
-    padding: 5
-
+    width: '100%',
+    height: 200,
+    marginVertical: 5,
   },
   banner: {
     height: 250,
@@ -95,13 +121,20 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingTop: 20,
-    paddingLeft: 20,
   },
   ciudad: {
     width: 250,
     height: 300,
     marginRight: 10,
     marginTop: 20,
+  },
+  listado: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  listadoItem: {
+    flexBasis: '49%',
   },
   // contenedor: {
   //   backgroundColor: '#ffcc99',
